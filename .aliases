@@ -1,0 +1,36 @@
+# Docker Compose
+cd_gateway_pgo() { cd ~/Projects/jaya/slim/v38/gateway-multi-module-boot; }
+
+dc_up_gateway_pgo() {
+  cd_gateway_pgo;
+  docker-compose -f docker-compose_card-dev.yml up -d --no-deps db artemis;
+  sleep 20s;
+  docker-compose -f docker-compose_card-dev.yml up -d --no-deps configservice eureka-service;
+  sleep 20s;
+  docker-compose -f docker-compose_card-dev.yml up -d --no-deps api-gateway gateway-web-api;
+  sleep 20s;
+  docker-compose -f docker-compose_card-dev.yml up -d --no-deps gateway-card;
+}
+dc_down_gateway_pgo() {
+  cd_gateway_pgo;
+  docker-compose -f docker-compose_card-dev.yml down;
+}
+
+alias dc-up-gateway-pgo='dc_up_gateway_pgo'
+alias dc-down-gateway-pgo='dc_down_gateway_pgo'
+alias dc-logs-gateway-pgo='docker-compose -f ~/Projects/jaya/slim/v38/gateway-multi-module-boot/docker-compose_card-dev.yml logs -f --tail=10'
+
+# Util
+alias copyssh="xclip -sel clip < ~/.ssh/id_rsa.pub"
+alias reloadcli="source $HOME/.zshrc"
+
+# Git
+alias gst="git status"
+alias gco="git checkout"
+alias gp="git pull"
+alias gl="git log --oneline --decorate --color"
+
+# Code path
+c() { cd ~/Projects/jaya/$1; }
+_c() { _files  -W ~/Projects/jaya -/; }
+compdef _c c

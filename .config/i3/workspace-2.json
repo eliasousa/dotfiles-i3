@@ -1,0 +1,28 @@
+// vim:ts=4:sw=4:et
+{
+  "layout": "splith",
+  "percent": 1.0,
+  "type": "con",
+  "nodes": [
+    {
+      "border": "pixel",
+      "current_border_width": 3,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 1017,
+        "width": 1896,
+        "x": 12,
+        "y": 63
+      },
+      "name": "Visual Studio Code",
+      "percent": 1,
+      "swallows": [
+        {
+          "class": "^Code$",
+          "instance": "^code$"
+        }
+      ],
+      "type": "con"
+    }
+  ]
+}

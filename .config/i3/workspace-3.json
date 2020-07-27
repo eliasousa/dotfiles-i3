@@ -1,0 +1,48 @@
+// vim:ts=4:sw=4:et
+{
+  "layout": "splith",
+  "percent": 0.5,
+  "type": "con",
+  "nodes": [
+    {
+      "border": "pixel",
+      "current_border_width": 3,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 344,
+        "width": 1896,
+        "x": 9,
+        "y": 374
+      },
+      "name": "Mailspring",
+      "percent": 0.5,
+      "swallows": [
+        {
+          "class": "^Mailspring$",
+          "instance": "^mailspring$"
+        }
+      ],
+      "type": "con"
+    },
+    {
+      "border": "pixel",
+      "current_border_width": 3,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 600,
+        "width": 800,
+        "x": 0,
+        "y": 0
+      },
+      "name": "Spotify Premium",
+      "percent": 0.5,
+      "swallows": [
+        {
+          "class": "^Spotify$",
+          "instance": "^spotify$"
+        }
+      ],
+      "type": "con"
+    }
+  ]
+}
