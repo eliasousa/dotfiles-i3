@@ -1,29 +1,9 @@
 // vim:ts=4:sw=4:et
 {
-  "layout": "splith",
+  "layout": "splitv",
   "percent": 0.5,
   "type": "con",
   "nodes": [
-    {
-      "border": "pixel",
-      "current_border_width": 3,
-      "floating": "auto_off",
-      "geometry": {
-        "height": 1037,
-        "width": 943,
-        "x": 0,
-        "y": 0
-      },
-      "name": "Mozilla Firefox",
-      "percent": 0.5,
-      "swallows": [
-        {
-          "class": "^Firefox$",
-          "instance": "^Navigator$"
-        }
-      ],
-      "type": "con"
-    },
     {
       "border": "pixel",
       "current_border_width": 3,
@@ -40,6 +20,26 @@
         {
           "class": "^Slack$",
           "instance": "^slack$"
+        }
+      ],
+      "type": "con"
+    },
+    {
+      "border": "pixel",
+      "current_border_width": 3,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 1037,
+        "width": 943,
+        "x": 0,
+        "y": 0
+      },
+      "name": "Mozilla Firefox",
+      "percent": 0.5,
+      "swallows": [
+        {
+          "class": "^Firefox$",
+          "instance": "^Navigator$"
         }
       ],
       "type": "con"

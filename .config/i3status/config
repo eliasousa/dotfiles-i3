@@ -29,7 +29,7 @@ cpu_usage {
 }
 
 memory {
-  format = "<span color='#50fa7b' > %used</span>"
+  format = "<span color='#ff79c6' > %used</span>"
   threshold_degraded = "10%"
   format_degraded = "MEMORY < %available"
 }
